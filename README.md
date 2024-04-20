@@ -1,12 +1,9 @@
 # GCPIntroduction RESTful APIs
 
 
-
 # Prerequisites
 
 1. GCP Account
-2. git installed on your local machine
-3. ....
 
 # Background
 
@@ -22,12 +19,12 @@ standard for building and documenting Restful APIs (language-agnostic)
 
 APIs can be represented as trees:
 
-![Sample Graph](./Assets/OpenApi_map.png)
+![OpenAPI Map](Assets/OpenApi_map.png)
 
 
 A more detailed look on the obejcts:
 
-![Sample Graph](./Assets/OpenApi_object.png)
+![OpenAPI Obejct](Assets/OpenApi_object.png)
 
 ## Api Gateway
 
@@ -49,11 +46,11 @@ A more detailed look on the obejcts:
 
 ## Serverless
 
-
-
 important key-words:
 - event driven
-- 
+- SaaS
+
+![Serverless Services](Assets/OpenApi_object.png)
 
 
 

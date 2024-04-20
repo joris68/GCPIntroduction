@@ -1,0 +1,17 @@
+swagger: '2.0'
+info:
+  title: HelloWorldAPI
+  description: Sample API with Google Cloud Functions Backend
+  version: '1.0'
+# basePath: /v1
+# host: api.server.test
+schemes:
+  - https
+paths:
+  /helloworld:
+    get:
+      summary: Just outputs Hello world
+      operationId: getHelloWorld 
+      responses:
+        200:
+          description: OK
