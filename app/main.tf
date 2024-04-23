@@ -21,7 +21,7 @@ provider "google-beta" {
   region  = var.region
 }
 
-/*
+
 #specifies the actual resource the api agteway service
 resource "google_api_gateway_api" "helloworldAPI" {
   provider = google-beta
@@ -55,7 +55,7 @@ resource "google_api_gateway_gateway" "api_gateway" {
 output "api_gateway_url" {
   value = google_api_gateway_gateway.api_gateway.default_hostname
 }
-*/
+
 
 module "backend" {
      source = "./backend"

@@ -7,11 +7,18 @@ info:
 # host: api.server.test
 schemes:
   - https
+produces:
+  - application/json
+#security:
+#  - api_key: [] # everybody has to authenticate using an API Key
+
 paths:
   /helloworld:
     get:
       summary: Just outputs Hello world
-      operationId: getHelloWorld 
+      operationId: helloWorld
+      x-google-backend:
+        address: "https://europe-west1-cloudintroduction-420521.cloudfunctions.net/helloworldfunction" # important for every backend service
       responses:
         200:
           description: OK
