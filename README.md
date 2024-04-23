@@ -19,12 +19,12 @@ standard for building and documenting Restful APIs (language-agnostic)
 
 APIs can be represented as trees:
 
-![OpenAPI Map](assets/OpenApi_map.png)
+![OpenAPI Map](Assets/OpenApi_map.png)
 
 
 A more detailed look on the obejcts:
 
-![OpenAPI Obeject](assets/OpenApI_object.png)
+![OpenAPI Obeject](Assets/OpenApI_object.png)
 
 ## Api Gateway
 
@@ -50,7 +50,7 @@ important key-words:
 - event driven
 - SaaS
 
-![Serverless Services](assets/Serverless.png)
+![Serverless Services](Assets/Serverless.png)
 
 
 
