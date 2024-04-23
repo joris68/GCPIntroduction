@@ -52,6 +52,18 @@ resource "google_api_gateway_gateway" "api_gateway" {
   api_config  = google_api_gateway_api_config.api_cfg.id
 }
 
+resource "google_api_gateway_gateway_iam_member" "public_invoker" {
+  provider = google-beta
+
+  gateway  = google_api_gateway_gateway.api_gateway.name
+  project  = var.project_id
+  region   = var.region
+  role     = "roles/apigateway.invoker"
+  member   = "allUsers"
+
+}
+
+
 output "api_gateway_url" {
   value = google_api_gateway_gateway.api_gateway.default_hostname
 }

@@ -9,8 +9,8 @@ schemes:
   - https
 produces:
   - application/json
-#security:
-#  - api_key: [] # everybody has to authenticate using an API Key
+security:
+  - api_key: [] # everybody has to authenticate using an API Key
 
 paths:
   /helloworld:
