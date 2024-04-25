@@ -6,18 +6,18 @@
 const functions = require('@google-cloud/functions-framework');
 
 const myHttpFunction = (req, res) => {
-    if (req.method === "GET") {
-        res.send("Hello World from GCP!");
-    } else if (req.method === "POST") {
-        let body = JSON.parse(req.body);
-        if (body.message === "MAKE LOVE") {
-            res.send("NOT WAR");
-        } else {
-            res.send("WHAT DO YOU WANT?");
-        }
-    } else {
-        res.send("WEIRD REQUEST BRO");
-    }
+
+     switch (req.method){
+          case 'GET':
+               res.status(200).send("Hello World from GCP!");
+               break;
+          case 'POST':
+               if (req.body.message === "MAKE LOVE"){
+                    res.status(200).send("NOT WAR");
+               }else{
+                    res.status(200).send("WHAT DO YOU WANT?");
+               }
+     }
 };
 
 functions.http('myHttpFunction', myHttpFunction);

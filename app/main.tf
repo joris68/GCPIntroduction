@@ -52,16 +52,26 @@ resource "google_api_gateway_gateway" "api_gateway" {
   api_config  = google_api_gateway_api_config.api_cfg.id
 }
 
-resource "google_api_gateway_gateway_iam_member" "public_invoker" {
-  provider = google-beta
+#resource "google_api_gateway_gateway_iam_member" "public_invoker" {
+  #provider = google-beta
+  # hier hab ich das verändert
+  #project = google_api_gateway_gateway.api_gateway.project
+  #region = google_api_gateway_gateway.api_gateway.region
+  #gateway = google_api_gateway_gateway.api_gateway.gateway_id
 
-  gateway  = google_api_gateway_gateway.api_gateway.name
-  project  = var.project_id
-  region   = var.region
-  role     = "roles/apigateway.invoker"
-  member   = "allUsers"
+  #role     = "roles/apigateway.public_invoker"
+  #member   = "allUsers"
 
-}
+  ###
+  #provider = google-beta
+  #gateway  = google_api_gateway_gateway.api_gateway.name
+  #project  = var.project_id
+  #region   = var.region
+  
+  #role     = "roles/apigateway.invoker"
+  #member   = "allUsers"
+
+#}
 
 
 output "api_gateway_url" {

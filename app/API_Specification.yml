@@ -9,8 +9,8 @@ schemes:
   - https
 produces:
   - application/json
-security:
-  - api_key: [] # everybody has to authenticate using an API Key
+#security:
+#  - api_key: [] # everybody has to authenticate using an API Key
 
 paths:
   /helloworld:
@@ -19,6 +19,14 @@ paths:
       operationId: helloWorld
       x-google-backend:
         address: "https://europe-west1-cloudintroduction-420521.cloudfunctions.net/helloworldfunction" # important for every backend service
+      responses:
+        200:
+          description: OK
+    post:
+      summary: returns "MAKE LOVE" or something else
+      operationId: MAKE LOVE
+      x-google-backend:
+        address: "https://europe-west1-cloudintroduction-420521.cloudfunctions.net/helloworldfunction"
       responses:
         200:
           description: OK
