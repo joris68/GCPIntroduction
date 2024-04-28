@@ -36,3 +36,5 @@ terraform.rc
 # node stuff
 
 node_modules
+
+venv
