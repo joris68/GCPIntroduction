@@ -1,5 +1,6 @@
 /**
- * Responds to a HTTP request from the API Gateway that gets rerouted
+ * Responds to a HTTP request from the API Gateway that gets routed for the path
+ * /helloworld
  */
 
 
